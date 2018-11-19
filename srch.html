@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索页面</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script type="text/javascript" src="js/commom.js"></script>
+</head>
+<body>
+	<p>搜索页面 : <span id="text"></span></p>
+	<script type="text/javascript">
+		window.onload = function(){
+		var p =	getUrlParam('kw');
+		var span = document.querySelector('#text');
+		span.innerHTML = decodeURI(p);
+		}
+	</script>
+</body>
+</html>

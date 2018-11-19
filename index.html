@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物网</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="font/font_shop/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="lib/swiper/css/swiper.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div class="container">
+		<!-- 顶部搜索区域 -->
+		<header class="top-hd">
+			<div class="logo-wrap"></div>
+			<div class="srch-wrap">
+				<input type="text" id="srchTxt" class="srch-txt" placeholder="搜索商品/商铺"></input>
+				<i class="icon iconfont icon-icon-1" id="btnsrch"></i>
+			</div>
+			<div class="msg-wrap">
+				<i class="icon iconfont icon-xiaoxixinfengnews"></i>
+				<span>消息</span>
+			</div>
+		</header>
+		
+		<div class="scroll-view">
+			<!-- 轮播图区域 -->	
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="img/swiper1.png"></div>
+			        <div class="swiper-slide"><img src="img/swiper2.png"></div>
+			        <div class="swiper-slide"><img src="img/swiper3.png"></div>
+			        <div class="swiper-slide"><img src="img/swiper4.png"></div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>
+			    
+			    <!-- 如果需要导航按钮 -->
+			    <div class="swiper-button-prev"></div>
+			    <div class="swiper-button-next"></div>
+			</div>
+
+			<!-- 网站导航区域 -->
+			<div class="site-nav-wrap">
+				<div class="layer-sep"></div>
+				<ul class="site-nav">
+					<li class="site-nav-item">
+						<a href="#">
+							<i class="icon iconfont icon-weibiaoti2fuzhi05"></i>
+							<p>母嬰品</p>
+						</a>
+					</li>
+					<li class="site-nav-item">
+						<a href="#">
+							<i class="icon iconfont icon-chongzhi"></i>
+							<p>充值品</p>
+						</a>
+					</li>
+					<li class="site-nav-item">
+						<a href="#">
+							<i class="icon iconfont icon-fuwuchaoshi"></i>
+							<p>超市品</p>
+						</a>
+					</li>
+					<li class="site-nav-item">
+						<a href="#">
+							<i class="icon iconfont icon-xiangbao"></i>
+							<p>箱包品</p>
+						</a>
+					</li>
+				</ul>
+				<div class="layer-sep"></div>
+			</div>
+			<!-- 网站内容区域 -->
+			<!-- 秒杀区域 -->
+			<div class="layer ms-layer"> 
+				<div class="layer-hd">
+					<div class="hd-l">
+						<div class="hd-title">
+							<i class="icon  iconfont icon-shizhong"></i>
+							<span>秒杀</span>
+						</div>
+						<div class="time-wrap" id="mstime">
+							<span class="time-num">1</span>
+							<span class="time-num">2</span>
+							<span class="time-sep">:</span>
+							<span class="time-num">3</span>
+							<span class="time-num">4</span>
+							<span class="time-sep">:</span>
+							<span class="time-num">5</span>
+							<span class="time-num">6</span>
+						</div>
+					</div>
+					<div class="hd-r">
+						<a href="#">
+							<span>更多</span>
+							<i class="icon iconfont icon-gengduo2"></i>
+						</a>
+					</div>
+				</div>
+				<div class="layer-bd">
+					<ul class="layer-bd-list">
+						<li class="bd-list-item">
+							<a href="#">
+								<img src="img/p1.png">
+							</a>
+							<div class="item-des">
+								<span class="item-price">￥0.01</span>
+								<img class="ms-img" src="img/sm.png">
+							</div>
+						</li>
+						<li class="bd-list-item">
+							<a href="#">
+								<img src="img/p2.png">
+							</a>
+							<div class="item-des">
+								<span class="item-price">￥0.01</span>
+								<img class="ms-img" src="img/sm.png">
+							</div>
+						</li>
+						<li class="bd-list-item">
+							<a href="#">
+								<img class="ms-img" src="img/p3.png">
+							</a>
+							<div class="item-des">
+								<span class="item-price">￥0.01</span>
+								<img class="ms-img" src="img/sm.png">
+							</div>
+						</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="layer-sep"></div>
+
+			<!-- 运动区域 -->
+			<div class="layer yd-layer"> 
+				<div class="layer-hd">
+					<div class="hd-l">
+						<div class="hd-title">
+							<i class="icon  iconfont icon-yundong1"></i>
+							<span>运动</span>
+						</div>
+					</div>
+					<div class="hd-r">
+						<a href="#">
+							<span>更多</span>
+							<i class="icon iconfont icon-gengduo2"></i>
+						</a>
+					</div>
+				</div>
+				<div class="layer-bd">
+					<ul class="layer-bd-list">
+						<li class="bd-list-item yd-bd-l">
+							<a href="#">
+								<img class="ms-img" src="img/yd-l.png">
+							</a>
+						</li>
+						<li class="bd-list-item yd-bd-r">
+							<div class="bd-r-top bd-r-item">
+								<a href="#"><img class="bd-r-item-1" src="img/yd-r-2.png"></a>
+								<a href="#"><img class="bd-r-item-2" src="img/yd-r-1.png"></a>
+							</div>
+							<div class="bd-r-bottom bd-r-item">
+								<a href="#"><img class="bd-r-item-2" src="img/yd-r-1.png"></a>
+								<a href="#"><img class="bd-r-item-1" src="img/yd-r-2.png"></a>
+							</div>
+						</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="layer-sep"></div>
+			<!-- 箱包区域 -->
+			<div class="layer yd-layer"> 
+				<div class="layer-hd">
+					<div class="hd-l">
+						<div class="hd-title">
+							<i class="icon  iconfont icon-yundong1"></i>
+							<span>箱包</span>
+						</div>
+					</div>
+					<div class="hd-r">
+						<a href="#">
+							<span>更多</span>
+							<i class="icon iconfont icon-gengduo2"></i>
+						</a>
+					</div>
+				</div>
+				<div class="layer-bd">
+					<ul class="layer-bd-list">
+						<li class="bd-list-item yd-bd-l">
+							<a href="#">
+								<img class="ms-img" src="img/yd-l.png">
+							</a>
+						</li>
+						<li class="bd-list-item yd-bd-r">
+							<div class="bd-r-top bd-r-item">
+								<a href="#"><img class="bd-r-item-1" src="img/yd-r-2.png"></a>
+								<a href="#"><img class="bd-r-item-2" src="img/yd-r-1.png"></a>
+							</div>
+							<div class="bd-r-bottom bd-r-item">
+								<a href="#"><img class="bd-r-item-2" src="img/yd-r-1.png"></a>
+								<a href="#"><img class="bd-r-item-1" src="img/yd-r-2.png"></a>
+							</div>
+						</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="layer-sep"></div>
+			<!-- 女装区域 -->
+			<div class="layer yd-layer"> 
+				<div class="layer-hd">
+					<div class="hd-l">
+						<div class="hd-title">
+							<i class="icon  iconfont icon-yundong1"></i>
+							<span>女装</span>
+						</div>
+					</div>
+					<div class="hd-r">
+						<a href="#">
+							<span>更多</span>
+							<i class="icon iconfont icon-gengduo2"></i>
+						</a>
+					</div>
+				</div>
+				<div class="layer-bd">
+					<ul class="layer-bd-list">
+						<li class="bd-list-item yd-bd-l">
+							<a href="#">
+								<img class="ms-img" src="img/yd-l.png">
+							</a>
+						</li>
+						<li class="bd-list-item yd-bd-r">
+							<div class="bd-r-top bd-r-item">
+								<a href="#"><img class="bd-r-item-1" src="img/yd-r-2.png"></a>
+								<a href="#"><img class="bd-r-item-2" src="img/yd-r-1.png"></a>
+							</div>
+							<div class="bd-r-bottom bd-r-item">
+								<a href="#"><img class="bd-r-item-2" src="img/yd-r-1.png"></a>
+								<a href="#"><img class="bd-r-item-1" src="img/yd-r-2.png"></a>
+							</div>
+						</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="layer-sep"></div>
+		</div>
+		<!-- 页面底部 -->
+		<footer class="site-footer">
+			<ul class="footer-list">
+				<li class="footer-list-item cur">
+					<a href="#">
+						<i class="icon iconfont icon-zhuye2"></i>
+						<span>首页</span>
+					</a>
+				</li>
+				<li class="footer-list-item cur">
+					<a href="#">
+						<i class="icon iconfont icon-icon-"></i>
+						<span>搜索</span>
+					</a>
+				</li>
+				<li class="footer-list-item cur">
+					<a href="#">
+						<i class="icon iconfont icon-fuwuchaoshi"></i>
+						<span>超市</span>
+					</a>
+				</li>
+				<li class="footer-list-item cur">
+					<a href="cart.html">
+						<i class="icon iconfont icon-gouwuche1"></i>
+						<span>购物车</span>
+					</a>
+				</li>
+				<li class="footer-list-item cur">
+					<a href="#">
+						<i class="icon iconfont icon-mine-red"></i>
+						<span>我的</span>
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/rem.js"></script>
+	<script type="text/javascript" src="lib/zepto.js"></script>
+	<script type="text/javascript" src="lib/swiper/js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

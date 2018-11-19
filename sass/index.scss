@@ -1,0 +1,394 @@
+//头部导航
+.top-hd{
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	display: flex;
+	padding: 0 11px;
+	background:linear-gradient(to right,#900758,#f81c5a);
+	height: 38px;
+
+
+	//左侧的logo区域
+	.logo-wrap{
+		height: 32px;
+		width: 32px;
+		margin-top: 4px;
+		background: url('../img/logo.png') no-repeat;
+		background-size: cover;
+	}
+
+	//中间搜索区域
+	.srch-wrap{
+		flex:1; //设置自动缩放
+		padding: 6px 5px;
+		position: relative;
+		.srch-txt{
+			width: 100%;
+			box-sizing: border-box;
+			border:none;
+			line-height: 24px;
+			font-size: 12px;
+			border-radius: 12px;
+			background-color: #930f3e;
+			padding-left: 1em;
+			color: #fff;
+		}
+		input::-ms-input-placeholder{
+			color:#b38998;
+		}
+		input::-webkit-input-placeholder{
+			color:#b38998;
+		}
+		i{
+			position: absolute;
+			right: 12px;
+			font-size: 18px;
+			top: 7px;
+			color:#fff;
+		}
+	}
+	//右侧消息
+	.msg-wrap{
+		width: 24px;
+		height: 33px;
+		position: relative;
+		color: #fff;
+		i{
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		span{
+			font-size: 12px;
+			line-height: 12px;
+			position: absolute;
+			top: 24px;
+			left: 0;
+		}
+	}
+}
+
+//轮播样式
+.scroll-view{
+	min-width: 320px;
+	//max-height: 640px;
+	margin: 38px auto 42px;
+	.swiper-container{
+		margin-top: 38px;
+		border: 1px solid #beae8d;
+		border-left: none;
+		border-right: none;
+		//方法2：
+		// &::before{
+		// 	content: ' ';
+		// 	position: absolute;
+		// 	left: 0;
+		// 	top: 0;
+		// 	width: 200%;
+		// 	height: 200%;
+		// 	transform: scale(.5,.5);
+		// 	transform-origin: left top ;
+		// 	border:1px solid #beae8d;
+		// 	border-right: none;
+		// 	border-left: none;
+		// 	box-sizing: border-box;
+		// }
+		.swiper-wrapper{
+			.swiper-slide{
+				img{
+					height: 2.4rem;
+					width: 6.4rem;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+//网站导航区域
+.site-nav-wrap{
+	.site-nav{
+		background-color: #fff;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: 56px;
+		.site-nav-item{
+			flex:0 0 36px;
+			font-size: 12px;
+			height: 47px;
+			a{
+				display: block;
+				i{
+					width: 30px;
+					height: 30px;
+					display: block;
+					border-radius: 15px;
+					background-color: #7f47dd;
+					font-size: 20px;
+					color:#fff;
+					text-align: center;
+					line-height: 30px;
+					margin: 0 auto;
+				}
+				p{
+					font-size: 12px;
+					color: #494949;
+				}
+			}
+		}
+	}
+}
+
+//网站内容区域
+.layer{	
+	background-color: #fff;
+
+	.layer-hd{
+		height: 0.56rem;
+		padding: 0 0.22rem;
+		position: relative;
+		&::before {
+			content: '  ';
+			width: 0.12rem;
+			height: 100%;
+			background-color: yellow;
+			position: absolute;
+			top: 0;
+		}
+		&::after{
+			content: ' ';
+			width: 200%;
+			height: 200%;
+			border:1px solid #beae8d;
+			left:0;
+			top:0;
+			transform: scale(0.5,0.5);
+			transform-origin: left top;
+			border-left: none;
+			border-right: none;
+			box-sizing: border-box;
+			position: absolute;
+		}
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color : orange;
+		.hd-l{
+			display: flex;
+			justify-content: flex-start;
+			.hd-title{	
+				height: 0.56rem;
+				line-height: 0.56rem;
+				font-size: 0.3rem;
+				padding-left: 0.26rem;
+				font-weight: bolder;
+				i{
+					font-size: 0.3rem;
+				}
+				// 	height: 0.56rem;
+				// 	line-height: 0.56rem;
+				// 	position: relative;
+				// div{
+				// 	//float: left;
+				// 	font-size: 0.5rem;
+				// 	height: 0.56rem;
+				// 	line-height: 0.56rem;
+				// 	position: absolute;
+				// 	left: 0.2rem;
+				// 	color: yellow;
+				// }
+				// span{
+				// 	//float: left;
+				// 	font-size: 0.25rem;
+				// 	color: yellow;
+				// 	position: absolute;
+				// 	left:0.8rem;
+				// }
+			}
+			.time-wrap{
+				height: 0.56rem;
+				line-height: 0.56rem;
+				margin-left: 0.1rem;
+				font-size: 0.24rem;
+				word-spacing: 0.04rem;
+				// font-size: 0.3rem;
+				// position: relative;
+				// top:10px;
+				.time-sep{
+					color:#121212;
+				}
+				.time-num{
+					line-height: 0.3rem;	
+					height: 0.3rem;
+					width: 0.22rem;
+					background-color: #121212;
+					color:#ddd;
+					display: inline-block;
+					text-align: center;
+				}
+			}
+		}
+		.hd-r{
+			i.icon{
+				display: inline-block;
+				text-align: center;
+				line-height: 0.32rem;
+				height: 0.32rem;
+				width: 0.24rem;
+				background-color: orange;
+				border-radius: 0.04rem;
+				&::before{
+					color:#122121;
+				}
+			}
+		}
+	}
+	.layer-bd{
+		height: 2.52rem;
+		padding: 0.14rem 0.22rem;
+		box-sizing: border-box;
+		.layer-bd-list{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+	}
+}
+//s=秒杀区域
+.ms-layer{
+	.layer-bd{
+		height: 2.26rem;
+		.layer-bd-list{
+			.bd-list-item{
+				a{
+					display: block;
+					img{
+						width: 1.78rem;
+						height: 1.78rem;
+						vertical-align: middle;
+					}
+				}
+					.item-des{
+						height: 0.23rem;
+						width: 1.78rem;
+						font-size: 0.24rem;
+						color:#ec1a5a;
+						text-align: center;
+						line-height: 0.24rem;
+					//	background:url(../img/sm.png) no-repeat;
+					//	background-size: cover;
+						position: relative;
+					//	left:0rem;
+					.ms-img{
+						position: absolute;
+						left: 0;
+						top:0.07rem;
+						width: 1.78rem;
+						height: 0.16rem;
+						z-index: 10;
+					    }
+					.item-price{
+						position: absolute;
+						left:0.5rem;
+						top:0;
+						z-index: 11;
+					}
+				}
+			}
+		}
+	}
+}
+//e=秒杀区域
+//
+//运动区域
+.yd-layer{
+	.layer-hd{
+		color:#bf0ff9;
+		&::before {
+			background-color: #bf0ff9;
+		}
+		.hd-r{
+			i.icon{
+				background-color:  #bf0ff9;				
+			}
+		}
+	}
+	.layer-bd{
+		.layer-bd-list{
+			.yd-bd-l{
+				a{
+					display: block;
+					img{
+						width: 1.78rem;
+						height: 2.28rem;
+						vertical-align: middle;
+					}
+				}
+			}
+			.yd-bd-r{
+				height: 2.28rem;
+				width: 3.98rem;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: space-between;
+				.bd-r-item{
+					display: flex;
+					justify-content: space-around;
+				}
+				a{
+					display: block;
+					.bd-r-item-1{
+						height: 1.03rem;
+						width: 1.1rem;
+						vertical-align: middle;
+					}
+					.bd-r-item-2{
+						width: 2.42rem;
+						height: 1.03rem;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+	}
+}
+
+//底部导航
+
+.site-footer{
+	position: fixed;
+	height: 42px;
+	background-color: #171717;
+	width: 100%;
+	left: 0;
+	z-index: 1000;
+	bottom: 0;
+	color:#9b9b9b;
+	.footer-list{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		.footer-list-item{
+			width: 36px;
+			height: 42px;
+			text-align: center;
+			i{
+				font-size: 20px;
+				line-height: 20px;
+				position: relative;
+				top:3px;
+			}
+			span{
+				font-size: 12px;
+				line-height: 12px;
+				position: relative;
+				top:-1px;
+			}
+		}
+	}
+}

@@ -1,0 +1,271 @@
+@charset 'utf-8';
+//引入hotcss的px2rem函数文件
+@import '../lib/hotcss/src/px2rem.scss';
+
+//定义设计图的宽度
+$designWidth: 750;
+
+//购物车顶部样式
+.top-hd{
+	color:#fff;
+	background: linear-gradient(to right,#910758,#f61c5a);
+	position: relative;
+	h3{
+		text-align: center;
+		font-size: px2rem(30);
+		font-weight:700;
+		height: px2rem(90);
+		line-height: px2rem(90);
+	}
+	.tp-shopcart-edit{
+		position: absolute;
+		right: px2rem(26);
+		top: px2rem(34);
+		font-size: px2rem(28);
+		font-weight:700;
+	}
+}
+
+
+
+//购物车列表
+.goods-list{   //ul
+	margin-bottom: px2rem(172);
+	.goods-item{ // li
+		.goods-item-hd{
+			border:1px solid #ccc;
+			height: px2rem(72);
+			background-color: #fff;
+			box-sizing: border-box;
+
+			//用弹性盒子实现
+			display: flex;
+			justify-content: flex-start;
+			padding-left: px2rem(26);
+			align-items: center;
+			i{
+				background-color: #ec1a5a;
+				height: px2rem(42);;
+				width: px2rem(42);
+				border-radius: 50%;
+				font-size: px2rem(30);
+				color:#fff;
+				text-align: center;
+				line-height: px2rem(42);
+			}
+			h4{
+				font-size: px2rem(28);
+				padding-left: px2rem(15);
+			}
+
+			//浮动实现头部布局
+			// padding: px2rem(16) px2rem(26);
+			// i{
+			// 	float: left;
+			// 	background-color: #ec1a5a;
+			// 	height: px2rem(42);;
+			// 	width: px2rem(42);
+			// 	border-radius: 50%;
+			// 	font-size: px2rem(30);
+			// 	color:#fff;
+			// 	text-align: center;
+			// 	line-height: px2rem(42);
+			// }
+			// h4{
+			// 	float: left;
+			// 	font-size: px2rem(28);
+			// 	margin-left: px2rem(14);
+			// 	margin-top: px2rem(10);
+			// 	color:#333;
+			// }
+		}
+		.goods-item-bd{
+			height: px2rem(214);
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 0 px2rem(26);
+			background-color: #fff;
+			i{
+				background-color: #ec1a5a;
+				height: px2rem(42);
+				width: px2rem(42);
+				border-radius: 50%;
+				font-size: px2rem(30);
+				color:#fff;
+				text-align: center;
+				line-height: px2rem(42);
+				flex: 0 0 px2rem(42);
+			}
+			.goods-item-bd-l{
+				padding-left: px2rem(15);
+				a{	
+					display: block;
+					img{
+						vertical-align: top;
+						width: px2rem(185);
+						height:  px2rem(180);
+					}
+				}
+			}
+			.goods-item-bd-r{
+				line-height: px2rem(27);
+				height: px2rem(180);
+				padding-left: px2rem(15);
+
+				.goods-item-name{
+					font-size: px2rem(22);
+					//height: px2rem(54);
+				}
+
+				.goods-item-sku{
+					font-size: px2rem(20);
+					.sku-name{
+						color: #666;
+					}
+					.sku-value{
+						color: #ec1a5a;
+					}
+				}
+
+				.yx-sjicon-wrap{
+					height: px2rem(20);
+					width: px2rem(168);
+					background: url(../img/mobiphone.png) no-repeat;
+					background-size: contain;
+				}
+
+				.goods-item-price{
+					color: #ec1a5a;
+					font-size: px2rem(22);
+				}
+
+				.goods-item-edit-wrap{
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-end;
+					height: px2rem(48);
+					.edit-count-wrap{
+						border: 1px solid #ccc;
+						border-radius: px2rem(4);
+						overflow: hidden;
+						span{
+							float: left;
+							padding: 0 px2rem(12);
+							font-size: px2rem(20);
+							border-left: 1px solid #ccc;
+							height: px2rem(40);
+							line-height:  px2rem(40);
+							&:first-child{
+								border-left: none;
+							}
+						}
+					}
+					.edit-btn{
+						font-size: px2rem(35);
+					}
+				}
+			}							
+		}
+		.goods-item-sep{
+			background-color: #eee;
+			height: px2rem(20);
+		}
+	}
+}
+
+
+//结算
+.goods-account-wrap{
+	background-color: #fff;
+	height: px2rem(88);
+	width: 100%;
+	//opacity: .8;
+	position: fixed;
+	bottom: px2rem(84);
+	left: 0;
+	overflow: hidden;
+	padding-left: px2rem(26);
+	box-sizing: border-box;
+	.account-l{
+		float: left;
+		font-size: px2rem(32);
+		line-height: px2rem(88);
+		a{
+			display: block;
+			i{
+				background-color: #ec1a5a;
+				height: px2rem(40);;
+				width: px2rem(40);
+				border-radius: 50%;
+				font-size: px2rem(30);
+				color:#fff;
+				text-align: center;
+				line-height: px2rem(42);
+				display: inline-block;
+			}
+		}
+	}
+	.account-r{
+		float: right;
+		display: flex;
+		font-size: px2rem(26);
+		.account-r-sum{
+			width: px2rem(240);
+			height: px2rem(88);
+			line-height: px2rem(88);
+			.price-num{
+				color:#910758;
+			}
+		}
+		.account-settle{
+			width: px2rem(222);
+			height: px2rem(88);
+			box-sizing: border-box;
+			line-height: px2rem(88);
+			background: linear-gradient(to right,#910758,#f61c5a);
+			text-align: center;
+			color:#fff;
+		}
+	}
+}
+
+//底部
+.site-footer{
+	position: fixed;
+	height: px2rem(84);
+	background-color: #171717;
+	width: 100%;
+	left: 0;
+	z-index: 1000;
+	bottom: 0;
+	color:#9b9b9b;
+	.footer-list{
+		height: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		.footer-list-item{
+			width: px2rem(80);
+			height: px2rem(70);
+			text-align: center;
+			a{
+				display: block;
+				width: 100%;
+				height: 100%;
+				margin-top: px2rem(5);
+				i{
+					font-size: px2rem(42);
+					line-height: px2rem(36);
+					display: inline-block;
+				}
+				span{
+					font-size: px2rem(24);
+					line-height: px2rem(24);
+					display: inline-block;
+					margin-top: px2rem(4);
+				 }
+			}
+		}
+	}
+}
